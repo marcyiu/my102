@@ -18,30 +18,35 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             ListTile(
+              leading: Icon(Icons.home_rounded),
               title: Text('Home'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
+              leading: Icon(Icons.announcement_rounded),
               title: Text('Announcements'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
+              leading: Icon(Icons.school_rounded),
               title: Text('Training'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
+              leading: Icon(Icons.download_rounded),
               title: Text('Downloads'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
+              leading: Icon(Icons.work_rounded),
               title: Text('Staff Area'),
               onTap: () {
                 Navigator.pop(context);
