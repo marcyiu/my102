@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-import 'screens/home_screen.dart';
+import 'screens/main_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primaryColor: Colors.lightBlue[900],
       ),
-      home: HomeScreen(),
+      home: MainScreen(),
     );
   }
 }

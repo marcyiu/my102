@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:my102/main.dart';
-import 'package:my102/screens/announcements_screen.dart';
-import 'package:my102/screens/attendance_screen.dart';
-import 'package:my102/screens/downloads_screen.dart';
-import 'package:my102/screens/staffarea_screen.dart';
-import 'package:my102/screens/training_screen.dart';
-
+import '../main.dart';
 import 'home_screen.dart';
+import 'announcements_screen.dart';
+import 'attendance_screen.dart';
+import 'downloads_screen.dart';
+import 'staffarea_screen.dart';
+import 'training_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -131,7 +129,10 @@ class _MainScreenState extends State<MainScreen> {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: IconButton(
-                    icon: Icon(Icons.menu_rounded),
+                    icon: Transform.scale(
+                      scaleX: -1,
+                      child: Icon(Icons.menu_open_rounded),
+                    ),
                     onPressed: () {
                       setState(() {
                         _extended = !_extended;
