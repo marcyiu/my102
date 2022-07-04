@@ -17,6 +17,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   bool _extended = false;
+  double _scaleX = -1;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -130,13 +131,22 @@ class _MainScreenState extends State<MainScreen> {
                   alignment: Alignment.bottomCenter,
                   child: IconButton(
                     icon: Transform.scale(
-                      scaleX: -1,
+                      scaleX: _scaleX,
                       child: Icon(Icons.menu_open_rounded),
                     ),
                     onPressed: () {
                       setState(() {
                         _extended = !_extended;
                       });
+                      if (_scaleX == -1) {
+                        setState(() {
+                          _scaleX = 1;
+                        });
+                      } else {
+                        setState(() {
+                          _scaleX = -1;
+                        });
+                      }
                     },
                   ),
                 ),
