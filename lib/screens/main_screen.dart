@@ -94,12 +94,13 @@ class _MainScreenState extends State<MainScreen> {
                 setState(() {
                   _selectedIndex = index;
                   _extended = false;
+                  _scaleX = -1;
                 });
               },
               extended: _extended,
               // minWidth: 55,
               indicatorColor: Theme.of(context).primaryColor,
-              selectedIconTheme: IconThemeData(color: Colors.white),
+              selectedIconTheme: const IconThemeData(color: Colors.white),
               destinations: const <NavigationRailDestination>[
                 NavigationRailDestination(
                   icon: Icon(Icons.home_rounded),
@@ -138,6 +139,7 @@ class _MainScreenState extends State<MainScreen> {
                       setState(() {
                         _extended = !_extended;
                       });
+
                       if (_scaleX == -1) {
                         setState(() {
                           _scaleX = 1;
